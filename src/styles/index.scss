@@ -1,0 +1,31 @@
+@use "variables" as *;
+@forward "button";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Ubuntu+Mono&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin-top: 2rem;
+  margin-left: 5rem;
+}
+
+h1 {
+  color: $clr-title;
+}
+
+code {
+  font: 12px "Ubuntu Mono", monospace;
+  color: $clr-code;
+}
+
+.group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 170px));
+  margin-bottom: 45px;
+  row-gap: 1rem;
+
+  div {
+    display: grid;
+    justify-items: start;
+    gap: 12px;
+  }
+}

@@ -1,0 +1,129 @@
+@use "variables" as *;
+
+button {
+  font-size: 14px;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+
+  box-shadow: 0px 2px 3px 0px hsla(0, 0%, 20%, 0.2);
+
+  &.sm {
+    padding: 6px 12px;
+  }
+
+  &.md {
+    padding: 8px 16px;
+  }
+
+  &.lg {
+    padding: 11px 22px;
+  }
+
+  &[color="default"] {
+    color: $clr-default-btn;
+    background-color: $bg-default;
+
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: $bg-default-hover;
+    }
+  }
+
+  &[color="primary"] {
+    color: white;
+    background-color: $bg-primary;
+
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: $bg-primary-hover;
+    }
+  }
+
+  &[color="secondary"] {
+    color: white;
+    background-color: $bg-secondary;
+
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: $bg-secondary-hover;
+    }
+  }
+
+  &[color="danger"] {
+    color: white;
+    background-color: $bg-danger;
+
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: $bg-danger-hover;
+    }
+  }
+
+  &.no-shadow {
+    box-shadow: none;
+  }
+
+  &:hover,
+  &:focus,
+  &.focus {
+    cursor: pointer;
+    background-color: $bg-default-hover;
+  }
+
+  &[variant="text"] {
+    color: $clr-blue-700;
+    background-color: white;
+
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: $clr-blue-100;
+    }
+  }
+
+  &[variant="outline"] {
+    outline: 1px solid;
+    color: $clr-blue-700;
+    background-color: transparent;
+
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: $clr-blue-100;
+    }
+  }
+
+  &:disabled {
+    color: $clr-disable-btn;
+    background-color: $bg-disable-btn;
+
+    &[variant="text"] {
+      box-shadow: none;
+      background-color: transparent;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+    &:hover {
+      cursor: default;
+      background-color: $bg-disable-btn;
+    }
+  }
+
+  &.icon {
+    display: flex;
+    gap: 8.67px;
+    align-items: center;
+
+    span {
+      font-size: 100%;
+    }
+  }
+}
